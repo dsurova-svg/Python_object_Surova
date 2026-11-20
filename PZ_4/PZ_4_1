@@ -1,0 +1,28 @@
+# Даны целые положительные числа N и K.
+# Найти сумму 1^K + 2^K + ... + N^K.
+
+n = input("Введите число N: ")
+while type(n) != int: 
+    try:
+        n = int(n)
+    except ValueError:
+        print("Неправильно ввели!")
+        n = input("Введите число N: ")
+
+k = input("Введите число K: ")
+while type(k) != int: 
+    try:
+        k = int(k)
+    except ValueError:
+        print("Неправильно ввели!")
+        k = input("Введите число K: ")
+
+if n <= 0 or k <= 0:
+    print("Числа должны быть положительными!")
+else:
+    total = 0
+    i = 1
+    while i <= n:
+        total += i ** k  # добавляем i в степени K к сумме
+        i += 1
+    print("Сумма:", total)

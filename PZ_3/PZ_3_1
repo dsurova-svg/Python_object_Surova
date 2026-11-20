@@ -5,7 +5,7 @@ while True:
     user_input = input("Введите трехзначное число: ")
 
     try:
-        n = int(user_input)  # обработка исключений
+        n = int(user_input)  
     except ValueError:
         print("Неправильно ввели!")
         continue
@@ -18,11 +18,11 @@ while True:
 
 # Разбираем число на цифры: сотни, десятки, единицы
 hundreds = n // 100
-tens = n // 10 % 10
+tenss = n // 10 % 10
 units = n % 10
 
 # Проверяем высказывание
-if hundreds < tens < units or hundreds > tens > units:
+if hundreds < tenss < units or hundreds > tenss > units:
     print(True)
 else:
     print(False)
