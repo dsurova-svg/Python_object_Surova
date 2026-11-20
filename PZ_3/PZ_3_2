@@ -1,0 +1,20 @@
+# Дано целое число. Если оно является положительным, то прибавить к нему 1;
+# в противном случае вычесть из него 2. Вывести полученное число.
+
+while True:
+    user_input = input("Введите целое число: ")
+
+    try:
+        n = int(user_input)  
+    except ValueError:
+        print("Неправильно ввели!")
+        continue
+
+    break
+
+if n > 0:
+    result = n + 1
+else:
+    result = n - 2
+
+print("Полученное число:", result)
