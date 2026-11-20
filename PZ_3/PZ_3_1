@@ -1,0 +1,28 @@
+# Дано трехзначное число. Проверить истинность высказывания:
+# «Цифры данного числа образуют возрастающую или убывающую последовательность».
+
+while True:
+    user_input = input("Введите трехзначное число: ")
+
+    try:
+        n = int(user_input)  # обработка исключений
+    except ValueError:
+        print("Неправильно ввели!")
+        continue
+
+    if n < 100 or n > 999:
+        print("Число должно быть трехзначным. Попробуйте снова.")
+        continue
+
+    break
+
+# Разбираем число на цифры: сотни, десятки, единицы
+hundreds = n // 100
+tens = n // 10 % 10
+units = n % 10
+
+# Проверяем высказывание
+if hundreds < tens < units or hundreds > tens > units:
+    print(True)
+else:
+    print(False)
