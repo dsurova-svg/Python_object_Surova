@@ -1,0 +1,8 @@
+# Составить функцию, которая напечатает сорок любых символов.
+import random
+def r():
+    res = ''
+    for _ in range(40):
+        res += chr(random.randint(1, 126))
+    print(res)
+r()
